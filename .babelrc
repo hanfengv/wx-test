@@ -1,0 +1,6 @@
+// .babelrc
+{
+  // https://babeljs.io/docs/en/babel-preset-env
+  // 此配置 允许您使用最新的 JavaScript，使 JavaScript 包更小！
+  "presets": ["@babel/env"]
+}
