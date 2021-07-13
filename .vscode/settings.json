@@ -1,0 +1,11 @@
+{
+  "less.compile": {
+    "outExt": ".wxss"
+  },
+  "files.associations": {
+    "*.wxml": "html"
+  },
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#449971d7"
+  }
+}

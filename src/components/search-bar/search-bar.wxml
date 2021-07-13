@@ -1,0 +1,26 @@
+<view class="search-bar">
+  <view class="search-bar-search" bind:tap="onTap">
+    <image class="search-bar-icon" src="../../images/icon-search.svg"></image>
+    <input
+      class="search-bar-keyword"
+      placeholder-class="search-bar-placeholder"
+      type="text"
+      auto-focus="{{ focus }}"
+      focus="{{ focus }}"
+      placeholder="{{ placeholder }}"
+      disabled="{{ disabled }}"
+      bindinput="onChange"
+      bindconfirm="onSearch"
+    />
+  </view>
+  <view class="search-bar-cancel" bind:tap="onCancel">{{ cancelText }}</view>
+</view>
+<!-- <van-popup
+  show="{{ isShowPopup && _showPopup }}"
+  safe-area-inset-bottom="{{ false }}"
+  custom-class="search-bar-popup"
+  bind:close="onClose"
+  overlay="{{ false }}"
+>
+  <slot></slot>
+</van-popup> -->
