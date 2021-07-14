@@ -1,7 +1,7 @@
 // app.js
-import moment from "moment";
-import { camelCase } from "lodash";
-import coordtransform from "coordtransform";
+// import moment from "moment";
+// import { camelCase } from "lodash";
+// import coordtransform from "coordtransform";
 function testNpm() {
   let sFromNowText = moment(new Date().getTime() - 360000).fromNow();
   console.log(sFromNowText);
@@ -11,7 +11,7 @@ function testNpm() {
 
 App({
   onLaunch() {
-    testNpm();
+    // testNpm();
     // 展示本地存储能力
     const logs = wx.getStorageSync("logs") || [];
     logs.unshift(Date.now());

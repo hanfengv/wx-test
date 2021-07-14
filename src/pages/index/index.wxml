@@ -1,5 +1,7 @@
 <!--index.wxml-->
 <search-bar></search-bar>
+<test-component></test-component>
+<van-button type="primary">按钮11</van-button>
 <view class="container">
   <view class="userinfo hello">
     <block wx:if="{{ canIUseOpenData }}">
