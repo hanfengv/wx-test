@@ -1,12 +1,17 @@
 const path = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
+const nodeModulesPath = (pathName = '') => path.resolve(__dirname, `node_modules/${pathName}`);
+
 module.exports = {
   context: path.resolve(__dirname, "src"),
   entry: {
     app: "./app.js",
     "pages/index/index": "./pages/index/index.js",
     "pages/logs/logs": "./pages/logs/logs.js",
+    "components/search-bar/search-bar": "./components/search-bar/search-bar.js",
+    "components/test-component/test-component": "./components/test-component/test-component.js",
+    "@vant/weapp/button/index": nodeModulesPath("@vant/weapp/dist/button/index.js"),
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -35,7 +40,6 @@ module.exports = {
           from: "**/*",
           to: "./",
           globOptions: {
-            gitignore: true,
             ignore: ["**/*.less", "**/*.js"],
           },
         },

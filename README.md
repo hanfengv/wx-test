@@ -64,7 +64,7 @@ npx webpack
 2. src/app.js -> dist/main.js
 3. 让微信开发者工具知道, dist 才是我们要发布的代码
 
-## 使用 webpack 解决 npm 的依赖问题
+## 使用 webpack bable-loader 解决 npm 的依赖问题
 
 [参考 babel-loader](https://webpack.docschina.org/loaders/babel-loader/)
 
@@ -73,3 +73,26 @@ npm i moment lodash
 // 使用 babel-loader 处理 js 依赖问题
 npm install -D babel-loader @babel/core @babel/preset-env webpack
 ```
+
+```js
+// .babelrc
+{
+  // https://babeljs.io/docs/en/babel-preset-env
+  // 此配置 允许您使用最新的 JavaScript，使 JavaScript 包更小！
+  "presets": ["@babel/env"]
+}
+```
+
+手动置入口文件
+
+```js
+entry: {
+    "app": "./app.js",
+    "pages/index/index": "./pages/index/index.js",
+    "pages/logs/logs": "./pages/logs/logs.js",
+    "components/search-bar/search-bar": "./components/search-bar/search-bar.js",
+    "components/test-component/test-component": "./components/test-component/test-component.js",
+},
+```
+
+## 通过写一个 webpack 插件来 自动处理入口文件依赖

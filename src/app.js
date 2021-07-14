@@ -1,11 +1,12 @@
 // app.js
 import moment from "moment";
 import { camelCase } from "lodash";
-
+import coordtransform from "coordtransform";
 function testNpm() {
   let sFromNowText = moment(new Date().getTime() - 360000).fromNow();
   console.log(sFromNowText);
   console.log(camelCase("OnLaunch"));
+  console.log("🚀 :: coordtransform", coordtransform);
 }
 
 App({

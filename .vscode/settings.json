@@ -5,6 +5,7 @@
   "files.associations": {
     "*.wxml": "html"
   },
+  "prettier.printWidth": 800,
   "workbench.colorCustomizations": {
     "titleBar.activeBackground": "#449971d7"
   }

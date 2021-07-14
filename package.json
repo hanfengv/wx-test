@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "coordtransform": "^2.1.2",
     "lodash": "^4.17.21",
     "moment": "^2.29.1"
   },
