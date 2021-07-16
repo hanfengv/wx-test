@@ -75,7 +75,8 @@ module.exports = {
     new WxPagesWatchWebpackPlugin(),
     new MinaRuntimePlugin(),
   ],
-  mode: "none",
+  mode: "development",
+  target: "browserslist",
   optimization: {
     usedExports: true, // Tree Shaking
     runtimeChunk: {
